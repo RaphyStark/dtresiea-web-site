@@ -1,4 +1,4 @@
-# How to setup the web site using git
+# Les étapes pour mettre en place un site web sur GitHub avec Git
 
 ## Initialiser git à la racine d’un projet
         $ git init
