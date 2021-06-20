@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Comment mettre en place un site web avec une raspberry pi</title>
+    </head>
+
+    <body>
+
+        <h1>Comment mettre en place un site web avec une raspberry pi ?</h1>
+            <h2>Mise en place d'un "LAMP"</h2>
+                <p>
+                    Après avoir mis en place son raspberry pi, il faut installer un LAMP ( pour linux, apache, mysql et php).
+                    Suivre le tuto Installer un serveur web sur votre Raspberry (Apache + PHP + MySQL)
+                    Puis la suite de ce tuto : Rendre votre Raspberry Pi accessible depuis internet avec DynDNS et le port Forwarding.
+                    Sur une freebox, il est possible de mettre en place d’une adresse IP fixe (gratuit).            
+                </p>
+
+            <h2>Mise en place d'un "DNS"</h2>
+                <p>
+                    Une fois cela fait, il faut mettre en place un DNS, disponible gratuitement chez free.
+                </p>
+    
+            <h2>Sécuriser son site web avec certbox !</h2>
+        
+            <p>Pour cela rien de plus simple, suivre le tuto se trouvant à l'adresse :
+            https://certbot.eff.org/lets-encrypt/debianbuster-apache
+            </p>
+        <h2>Modifier son site web depuis n'importe où avec SSH et VSC</h2>
+        
+            <h3>Mettre en place SSH</h3>
+                <p>https://www.dreamhost.com/blog/learn-how-to-use-ssh/</p>
+
+            <h3>Se conecter à distance</h3>
+                <p>
+                    Depuis un terminal sous la machine distante, taper :
+                    $ ssh pi@dtresiea.hd.free.fr
+                    Entrer le mot de passe et la raspberry pi est accessible et modifiable.
+                    Pour utiliser un IDE sous la machine distante, installer VSC et l’extension ssh :
+                    https://code.visualstudio.com/docs/remote/ssh
+                </p>
+        
+            <h3>Pouvoir modifier les fichiers sans être en sudo</h3>
+                <p>
+                    Pour avoir le droit de modifier les fichiers, taper dans le terminal en ssh ou directement depuis la raspberry pi :
+                    $ sudo chown -R pi /var/www (https://github.com/microsoft/vscode-remote-release/issues/1008)
+                    Ainsi, tous les fichiers du site web seront modifiable depuis l’utilisateur pi sans être en root depuis VSC (est-ce même possible ?)    
+                </p>
+
+                https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/1605060-mettez-en-place-le-css
+    </body>
+</html>
