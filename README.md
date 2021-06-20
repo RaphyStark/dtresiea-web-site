@@ -66,3 +66,7 @@ Les fichiers ou modifications ajoutés ne sont plus visibles
         $ git add .
         $ git commit -m ‘add README.md’
         $ git push
+        
+## Mettre à son espace de travail local
+        $ git status
+        $ git fetch
