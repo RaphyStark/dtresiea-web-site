@@ -38,7 +38,7 @@ Le point est important  il permet de dire à git qu’on souhaite restaurer les 
 ## Créer une nouvelle branche 
         $ git branch JSfile
 
-## Naviguer et développer dans la branche
+## Naviguer et développer dans la branche créée
         $ git checkout JSfile
 
 ## Savoir quelles sont les branches créées et dans laquelle on se trouve
