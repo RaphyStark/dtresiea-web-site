@@ -1,6 +1,8 @@
 # Les étapes pour mettre en place un site web sur GitHub avec Git
 
-Le site web de ce repo est disponible à l'adresse : https://dtresiea.hd.free.fr/
+#### Le site web de ce repo est disponible à l'adresse : https://dtresiea.hd.free.fr/
+#### La vidéo YouTube pour mettre en place ce tuto : https://www.youtube.com/watch?v=4o9qzbssfII&t=981s
+
 
 ## Initialiser git à la racine d’un projet
         $ git init
