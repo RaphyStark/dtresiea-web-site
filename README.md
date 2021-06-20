@@ -69,10 +69,10 @@ Les fichiers ou modifications ajoutés ne sont plus visibles
         
 ## Mettre à son espace de travail local
         $ git status
-Ne trouvera rien de nouveau
+### Ne trouvera rien de nouveau
         $ git fetch
-Demande à git de chercher les modifications
+### Demande à git de chercher les modifications
         $ git status
-Les modifications seront trouvées
+### Les modifications seront visibles
         $ git pull
-L'espace de travail local est mis à jour
+### L'espace de travail local est mis à jour
