@@ -64,7 +64,7 @@ Les fichiers ou modifications ajoutés ne sont plus visibles
         $ git commit -m 'initial commit into github repo'
         $ git push -u origin master
 
-## Renommer la branche en main (problème d'escalvagisme)
+## Renommer la branche en main (master : reference à l'esclavagisme)
         $ git branch -m master main \
         $ git push -u origin main \
         $ git remote set-head origin main
