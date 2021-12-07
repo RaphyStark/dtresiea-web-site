@@ -64,6 +64,13 @@ Les fichiers ou modifications ajoutés ne sont plus visibles
         $ git commit -m 'initial commit into github repo'
         $ git push -u origin master
 
+## Renommer la branche en main (problème d'escalvagisme)
+        $ git branch -m master main \
+        $ git push -u origin main \
+        $ git remote set-head origin main
+
+
+
 ## Ajouter un README.md
         $ touch README.md
         $ git add README.md
