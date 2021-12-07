@@ -60,10 +60,7 @@ Les fichiers ou modifications ajoutés ne sont plus visibles
 
 ## Ajouter son travail sur GitHub (créer au préalable un repository)
         $ git remote add origin https://github.com/RaphyStark/dtresiea-web-site.git
-        
-        
-        $ git branch -M main
-        $ git push -u origin main
+        $ git push -u origin master
 
 ## Ajouter un README.md
         $ touch README.md
