@@ -1,8 +1,9 @@
 # Les étapes pour mettre en place un site web sur GitHub avec Git
 
 #### Le site web de ce repo est disponible à l'adresse : https://dtresiea.hd.free.fr/ (il est pour le moment hors ligne)
-#### La vidéo YouTube pour mettre en place ce tuto : https://www.youtube.com/watch?v=4o9qzbssfII&t=981s
-
+#### Liens
+- https://www.youtube.com/watch?v=4o9qzbssfII&t=981s
+- https://www.journaldunet.fr/web-tech/developpement/1202943-effacer-une-branche-git-a-la-fois-locale-et-distante/
 
 ## Initialiser git à la racine d’un projet
         $ git init
@@ -20,43 +21,38 @@
 ## Désindexer certains fichiers (ou tous avec -r)  
         $ git rm --cached <fichier>
 
-## Remettre un fichier supprimé qui a été ajouté avec git add 
-        $ git checkout -- .
-Le point est important  il permet de dire à git qu’on souhaite restaurer les fichiers du répertoire courant
+## Ignorer certains fichiers
+        $ touch .gitignore <fichier>
+        $ touch .gitignore <dossier>/
 
-## Commit les fichiers ajoutés 
+## Commit les fichiers ajoutés
         $ git commit
 
 ## Changer l’éditeur 
         $ export GIT_EDITOR=vim (ou l’éditeur de votre choix)
 
-## Effectuer un commit sans ouvrir vim 
+## Effectuer un commit sans ouvrir vim  (+ push)
         $ git commit -m 'add first line in css file'
+        $ git push
 
-## Ignorer certains fichiers 
-        $ touch .gitignore <fichier>
-        $ touch .gitignore <dossier>/
+## "Remiser" les modifications faites dans un fichier depuis le dernier commit
+        $ git checkout -- index.html
 
-## Créer une nouvelle branche 
-        $ git branch JSfile
-
-## Naviguer et développer dans la branche créée
-        $ git checkout JSfile
-
-## Savoir quelles sont les branches créées et dans laquelle on se trouve
-        $ git branch --list
-
-## Commit un fichier depuis la branche JSfile
-        $ touch main.js
-        $ git add .
-        $ git commit -m ‘js file added’
-
-## Retour dans la branche master
-        $ git checkout master
-Les fichiers ou modifications ajoutés ne sont plus visibles
-
-## Merger la branche créée vers la branche master
-        $ git merge JSfile
+## Revenir au commit précédent (en créant une copie de l'avancée actuelle si nécessaire)
+        $ git commit -m "saves current state, need debug"
+        $ git push
+        $ git checkout 0d1d7fc32        (l'id des commits s'obtient avec la commande git log)
+        
+## Travailler avec les branches git
+        $ git branch JSfile             (créé la branche JSfile)
+        $ git branch --list             (permet aussi de savoir dans laquelle on est)
+        $ git checkout JSfile           (copie de travail devient JSfile)
+        $ touch main.js                 (création d'un fichier dans JSfile)
+        $ git add main.js               (ajoute le nouveau fichier au prochain commit)       
+        $ git commit -m ‘add js’        (commit le fichier)
+        $ git push                      (pousse la modif dans la nouvelle branche)
+        $ git checkout master           (retour dans la branche master, pas de fichier js...)
+        $ git merge JSfile              (merge la branche créée vers la branche master)
 
 ## Supprimer une branche
         $ git branch test
